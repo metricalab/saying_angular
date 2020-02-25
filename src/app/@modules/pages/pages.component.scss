@@ -1,0 +1,10 @@
+mat-sidenav-container {
+    mat-sidenav {
+        min-width: 200px;
+    }
+    height: calc(100% - 64px);
+}
+
+.main-container {
+    height: 100%;
+}

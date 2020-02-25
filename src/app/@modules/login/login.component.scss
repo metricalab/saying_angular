@@ -1,0 +1,31 @@
+.login-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://media.giphy.com/media/l3q2RgN7WUjeUUXm0/giphy.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    mat-card {
+        max-height: 50vh;
+        width: 30vw;
+        mat-card-title {
+            text-align: center;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        mat-card-content {
+            padding: 2rem;
+            mat-form-field {
+                width: 100%;
+            }
+        }
+        mat-card-actions {
+            text-align: end;
+            padding-right: 2rem;
+            padding-bottom: 2rem;
+        }
+    }
+}

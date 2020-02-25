@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <div>
+            <span>Metrica Saying</span>
+            <button mat-icon-button mat-flat-button (click)="sidenav.toggle()" color="primary">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
+        <div [matMenuTriggerFor]="menu">
+            <span>User user user</span>
+            <mat-icon>keyboard_arrow_down</mat-icon>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <span class="mr-2">Log out</span><mat-icon>exit_to_app</mat-icon>
+                </button>
+            </mat-menu>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
