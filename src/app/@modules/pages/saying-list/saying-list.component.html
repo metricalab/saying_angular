@@ -1,1 +1,12 @@
-<p>saying-list works!</p>
+<div class="page-container">
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let saying of sayingList">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    {{ saying.author }}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p *ngFor="let text of saying.sayings">{{ text }}</p>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
