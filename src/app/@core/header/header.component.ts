@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,12 +7,14 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
   @Input() sidenav: any;
-  constructor() { }
+  user = localStorage.getItem('user');
+  constructor(private router: Router) { }
 
-  ngOnInit() {
+  logout() {
+    localStorage.removeItem('user');
+    this.router.navigate(['/login']);
   }
-
 }
