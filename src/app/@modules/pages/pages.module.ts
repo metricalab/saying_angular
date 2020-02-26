@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { CoreModule } from 'src/app/@core/core.module';
-import { MatSidenavModule, MatListModule } from '@angular/material';
+import { MatSidenavModule, MatListModule, MatGridListModule, MatCardModule } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 
 
@@ -14,7 +14,9 @@ import { HomeComponent } from './home/home.component';
     CommonModule,
     PagesRoutingModule,
     MatSidenavModule,
+    MatGridListModule,
     MatListModule,
+    MatCardModule,
     CoreModule,
   ]
 })

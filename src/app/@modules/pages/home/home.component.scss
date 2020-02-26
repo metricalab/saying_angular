@@ -1,0 +1,10 @@
+.title {
+    text-align: center;
+}
+.saying-tile:hover {
+    mat-grid-tile {
+        border: 0.5px, 0.5px, 0.5px, 0.5px;
+        border-style: solid;
+        border-color: grey;
+    }
+}

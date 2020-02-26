@@ -8,3 +8,9 @@ mat-sidenav-container {
 .main-container {
     height: 100%;
 }
+
+.page-container {
+    background-color: grey;
+    height: calc(100% - 6rem);
+    padding: 3rem;
+}

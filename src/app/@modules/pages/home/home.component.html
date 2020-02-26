@@ -1,1 +1,15 @@
-<p>home works!</p>
+<div class="page-container">
+    <h2 class="title">Popular Sayings</h2>
+    <mat-card>
+        <mat-grid-list cols="3" rowHeight="20vh">
+            <div *ngFor="let saying of popularSayings" class="saying-tile">
+                <mat-grid-tile colspan="2">
+                    {{ saying.text }}
+                </mat-grid-tile>
+                <mat-grid-tile colspan="1">
+                    Author: {{ saying.author }}
+                </mat-grid-tile>
+            </div>
+        </mat-grid-list>
+    </mat-card>
+</div>
