@@ -1,0 +1,19 @@
+mat-card {
+    mat-card-header {
+        div[mat-card-avatar] {
+            background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+            background-size: cover;
+        }
+        mat-card-title {
+            text-align: center;
+        }
+    }
+    mat-card-content {
+        text-align: center;
+        padding: 3rem;
+    }
+    mat-card-actions {
+        text-align: end;
+        padding-right: 1rem;
+    }
+}

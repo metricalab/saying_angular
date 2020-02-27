@@ -13,7 +13,7 @@ export class SayingListComponent implements OnInit {
   constructor(private sayingService: SayingData, private router: Router) { }
 
   ngOnInit() {
-    this.sayingService.getData().subscribe(data => this.sayingList = data);
+    this.sayingService.getDataByAuthor().subscribe(data => this.sayingList = data);
   }
 
   seeDetails(saying: SayingByAuthor) {

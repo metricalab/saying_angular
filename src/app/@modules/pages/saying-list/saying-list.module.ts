@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SayingListRoutingModule } from './saying-list-routing.module';
 import { SayingListComponent } from './saying-list.component';
-import { MatExpansionModule } from '@angular/material';
+import { MatExpansionModule, MatCardModule, MatButtonModule, MatIconModule } from '@angular/material';
 import { SayingDetailComponent } from './saying-detail/saying-detail.component';
 
 
@@ -12,6 +12,9 @@ import { SayingDetailComponent } from './saying-detail/saying-detail.component';
   imports: [
     CommonModule,
     SayingListRoutingModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
     MatExpansionModule,
   ]
 })

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SayingData, Saying } from 'src/app/@core/models/saying.model';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-saying-detail',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SayingDetailComponent implements OnInit {
 
-  constructor() { }
+  saying: Saying;
+
+  constructor(private route: ActivatedRoute, private sayingService: SayingData) { }
 
   ngOnInit() {
+    this.route.params.subscribe((param: { id: number }) => this.sayingService.getData().subscribe(
+      (sayingList: Array<Saying>) => {
+        this.saying = sayingList.filter(x => x.id === Number(param.id))[0];
+      }
+    ));
   }
 
 }

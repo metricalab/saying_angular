@@ -1,0 +1,47 @@
+[
+    {
+        "author": "Anonymous",
+        "text": "Lorem ipsum",
+        "id": 1
+    },
+    {
+        "author": "Anonymous",
+        "text": "Lorem ipsum",
+        "id": 2
+    },
+    {
+        "author": "Anonymous",
+        "text": "Lorem ipsum",
+        "id": 3
+    },
+    {
+        "author": "Cristián",
+        "text": "Lorem ipsum",
+        "id": 4
+    },
+    {
+        "author": "Cristián",
+        "text": "Lorem ipsum",
+        "id": 5
+    },
+    {
+        "author": "Cristián",
+        "text": "Lorem ipsum",
+        "id": 6
+    },
+    {
+        "author": "Juan",
+        "text": "Lorem ipsum",
+        "id": 7
+    },
+    {
+        "author": "Juan",
+        "text": "Lorem ipsum",
+        "id": 8
+    },
+    {
+        "author": "Juan",
+        "text": "Lorem ipsum",
+        "id": 9
+    }
+]

@@ -5,6 +5,13 @@ mat-toolbar-row {
         display: flex;
         align-items: center;
         &:last-child {
+            div[mat-card-avatar] {
+                height: 40px;
+                width: 40px;
+                border-radius: 2rem;
+                background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+                background-size: cover;
+            }
             cursor: pointer;
         }
     }

@@ -1,1 +1,14 @@
-<p>saying-detail works!</p>
+<div class="page-container">
+    <mat-card *ngIf="saying">
+        <mat-card-header>
+            <div mat-card-avatar></div>
+            <mat-card-title>Saying by {{ saying.author }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>{{ saying.text }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-icon-button><mat-icon>favorite</mat-icon></button>
+        </mat-card-actions>
+    </mat-card>
+</div>

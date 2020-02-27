@@ -9,7 +9,11 @@ import { Observable } from 'rxjs';
 export class SayingService implements SayingData {
   constructor(private http: HttpClient) { }
 
-  getData(): Observable<any> {
+  getDataByAuthor(): Observable<any> {
     return this.http.get('/assets/mock/sayings-by-author.json');
+  }
+
+  getData(): Observable<any> {
+    return this.http.get('/assets/mock/sayings.json');
   }
 }
