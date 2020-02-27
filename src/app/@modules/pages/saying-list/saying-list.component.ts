@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SayingData, SayingByAuthor } from 'src/app/@core/models/saying.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-saying-list',
@@ -7,35 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SayingListComponent implements OnInit {
 
-  sayingList = [
-    {
-      author: 'Anonymous',
-      sayings: [
-        'Lorem ipsum',
-        'Lorem ipsum',
-        'Lorem ipsum',
-      ]
-    },
-    {
-      author: 'Cristián',
-      sayings: [
-        'Lorem ipsum',
-        'Lorem ipsum',
-        'Lorem ipsum',
-      ]
-    },
-    {
-      author: 'Juan',
-      sayings: [
-        'Lorem ipsum',
-        'Lorem ipsum',
-        'Lorem ipsum',
-      ]
-    }
-  ];
-  constructor() { }
+  sayingList: any;
+  constructor(private sayingService: SayingData, private router: Router) { }
 
   ngOnInit() {
+    this.sayingService.getData().subscribe(data => this.sayingList = data);
   }
 
+  seeDetails(saying: SayingByAuthor) {
+    this.router.navigate([`/saying-list/${saying.id}`]);
+  }
 }

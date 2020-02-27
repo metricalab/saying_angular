@@ -6,7 +6,7 @@
                     {{ saying.author }}
                 </mat-panel-title>
             </mat-expansion-panel-header>
-            <p *ngFor="let text of saying.sayings">{{ text }}</p>
+            <p *ngFor="let text of saying.sayings" class="saying" (click)="seeDetails(text)">{{ text.text }}</p>
         </mat-expansion-panel>
     </mat-accordion>
 </div>
