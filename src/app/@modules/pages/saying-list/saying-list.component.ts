@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SayingData, SayingByAuthor } from 'src/app/@core/models/saying.model';
+import { SayingData, Saying } from 'src/app/@core/models/saying.model';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,14 +9,14 @@ import { Router } from '@angular/router';
 })
 export class SayingListComponent implements OnInit {
 
-  sayingList: any;
+  sayings: any;
   constructor(private sayingService: SayingData, private router: Router) { }
 
   ngOnInit() {
-    this.sayingService.getDataByAuthor().subscribe(data => this.sayingList = data);
+    this.sayingService.getData().subscribe(data => this.sayings = data);
   }
 
-  seeDetails(saying: SayingByAuthor) {
+  seeDetails(saying: Saying) {
     this.router.navigate([`/saying-list/${saying.id}`]);
   }
 }
